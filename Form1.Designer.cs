@@ -46,7 +46,7 @@
             TextInputBtn.TabIndex = 0;
             TextInputBtn.Text = "↲";
             TextInputBtn.UseVisualStyleBackColor = true;
-            TextInputBtn.Click += textBox1_TextChanged;
+            TextInputBtn.Click += button1_Click;
             // 
             // Chat
             // 
