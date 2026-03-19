@@ -14,12 +14,25 @@ namespace EchoMessenger
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var text = TextInputBox.Text;
+            // 1. 문자열 정제 (Trim)
+            var text = TextInputBox.Text.Trim();
+
             if (!string.IsNullOrWhiteSpace(text))
             {
-                TextOutputBox.Items.Add(text);
+                // 2. 타임스탬프 추가
+                string timestamp = DateTime.Now.ToString("HH:mm:ss");
+                string message = $"[{timestamp}] {text}";
+
+                // 리스트 출력
+                TextOutputBox.Items.Add(message);
+
+                // 입력창 초기화
                 TextInputBox.Clear();
                 TextInputBox.Focus();
+
+                // 3. 메시지 카운트 업데이트
+                int count = TextOutputBox.Items.Count;
+                CountLabel.Text = $"현재 대화: {count}개";
             }
         }
 

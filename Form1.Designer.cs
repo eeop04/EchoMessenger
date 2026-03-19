@@ -35,6 +35,7 @@
             AllChat = new Button();
             T1Chat = new Button();
             T2Chat = new Button();
+            CountLabel = new Label();
             SuspendLayout();
             // 
             // TextInputBtn
@@ -104,11 +105,21 @@
             T2Chat.Text = "팀2";
             T2Chat.UseVisualStyleBackColor = true;
             // 
+            // CountLabel
+            // 
+            CountLabel.AutoSize = true;
+            CountLabel.Location = new Point(692, 81);
+            CountLabel.Name = "CountLabel";
+            CountLabel.Size = new Size(0, 20);
+            CountLabel.TabIndex = 7;
+            CountLabel.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(802, 453);
+            Controls.Add(CountLabel);
             Controls.Add(T2Chat);
             Controls.Add(T1Chat);
             Controls.Add(AllChat);
@@ -131,5 +142,6 @@
         private Button AllChat;
         private Button T1Chat;
         private Button T2Chat;
+        private Label CountLabel;
     }
 }
